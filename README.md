@@ -51,7 +51,7 @@ Modelagem de uma coleção de produtos no MongoDB, utilizando documentos com arr
 - Análise de execução com `.explain("executionStats")`;
 - Reflexão sobre Embedding e Referencing.
 
-**Pasta:** [Sprint 7 e 8 - MongoDB E-commerce](Sprint%207%20e%208%20-%20MongoDB%20E-commerce/)
+**Pasta:** [Sprint 07 e 08 - MongoDB E-commerce](Sprint%207%20e%208%20-%20MongoDB%20E-commerce/)
 
 ### Sprint 9 e 12 — Banco de Grafos e Cache
 **Tema: Sistema de recomendações com Neo4j e carrinho de compras com Redis**
@@ -64,7 +64,7 @@ Modelagem de relacionamentos entre usuários e produtos em um grafo Neo4j, além
 - Operações `HSET`, `HGETALL`, `EXPIRE`, `TTL` e invalidação com `DEL`;
 - Reflexão sobre bancos de grafos, JOINs relacionais e cache em memória.
 
-**Pasta:** [Sprint 9 e 12 - Grafos e Cache](Sprint%209%20e%2012%20-%20Grafos%20e%20Cache/)
+**Pasta:** [Sprint 09 e 12 - Grafos e Cache](Sprint%209%20e%2012%20-%20Grafos%20e%20Cache/)
 
 ### Sprint 13 — Arquitetura com Persistência Poliglota
 **Tema: Divisão de um ERP em contextos de Vendas, Estoque e Financeiro**
@@ -105,23 +105,24 @@ Desenho de uma arquitetura com três contextos delimitados e escolha de SGBDs co
 
 ```text
 Projetos-BancoDeDados-TechX/
-├── Sprint 1 - Radar de Dados/
-├── Sprint 2 - Modelagem de Dados/
-├── Sprint 3 - Modelagem de Dados/
-├── Sprint 4/
-├── Sprint 5/
-├── Sprint 6 - Banco de Dados/
-├── Sprint 7 e 8 - MongoDB E-commerce/
+├── Sprint 01 - Radar de Dados/
+├── Sprint 02 - Modelagem de Dados/
+├── Sprint 03 - Modelagem de Dados/
+├── Sprint 04/
+├── Sprint 05/
+├── Sprint 06 - Banco de Dados/
+├── Sprint 07 e 08 - MongoDB E-commerce/
 │   ├── README.md
 │   ├── 01_setup.js
 │   ├── 02_insercao_dados.js
 │   ├── 03_indices.js
 │   └── 04_consultas.js
-└── Sprint 9 e 12 - Grafos e Cache/
-    ├── README.md
-    ├── 01_modelo_grafo.cypher
-    ├── 02_consultas_recomendacao.cypher
-    └── 03_carrinho_redis.redis
+├── Sprint 09 e 12 - Grafos e Cache/
+│   ├── README.md
+│   ├── 01_modelo_grafo.cypher
+│   ├── 02_consultas_recomendacao.cypher
+│   └── 03_carrinho_redis.redis
+└── Sprint 13/
 ```
 
 ## ▶️ Como utilizar
