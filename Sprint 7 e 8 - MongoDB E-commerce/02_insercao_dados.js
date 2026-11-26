@@ -20,7 +20,7 @@ const resultado = produtos.insertMany([
       pais: "Brasil"
     },
     variacoes: [
-      { tamanho: " compacto", cor: "Preto", estoque: 8 },
+      { tamanho: "Compacto", cor: "Preto", estoque: 8 },
       { tamanho: "compacto", cor: "Azul", estoque: 10 }
     ]
   },
