@@ -1,0 +1,27 @@
+# Sprint 13 | Contexto Vendas | Redis
+# Chave: cart:session:{sessionId}
+# Hash: campo produto:{id} -> quantidade
+# Execute: redis-cli < carrinho.redis
+
+# 1. Adicionar itens à sessão do carrinho.
+HSET cart:session:abc123 produto:CEL-001 1
+HSET cart:session:abc123 produto:CAM-001 2
+
+# 2. Recuperar o carrinho completo.
+HGETALL cart:session:abc123
+
+# 3. Expiração em 30 minutos (1800 segundos).
+EXPIRE cart:session:abc123 1800
+
+# 4. Consultar o TTL restante.
+TTL cart:session:abc123
+
+# 5. Atualizar a quantidade e renovar o TTL.
+HSET cart:session:abc123 produto:CAM-001 3
+EXPIRE cart:session:abc123 1800
+
+# 6. Consultar novamente o carrinho.
+HGETALL cart:session:abc123
+
+# O pedido definitivo deve ser persistido em serviço/banco durável.
+# O Redis representa somente o carrinho temporário.
