@@ -1,0 +1,30 @@
+# Sprint 9 e 12 — operações de carrinho no Redis
+# Chave: cart:user:{userId}
+# Hash: campo produto:{productId} -> quantidade
+# Execute com: redis-cli < 03_carrinho_redis.redis
+
+# 1) Adicionar itens ao carrinho do usuário 1001.
+HSET cart:user:1001 produto:501 2
+HSET cart:user:1001 produto:702 1
+
+# 2) Consultar o carrinho completo.
+HGETALL cart:user:1001
+
+# 3) Definir expiração de 24 horas (86400 segundos).
+EXPIRE cart:user:1001 86400
+
+# 4) Consultar o TTL restante.
+TTL cart:user:1001
+
+# 5) Simular atualização de quantidade de um item.
+HSET cart:user:1001 produto:501 3
+
+# Renovar o TTL após a atualização, conforme a política adotada.
+EXPIRE cart:user:1001 86400
+
+# 6) Checkout: após validar os itens e persistir o pedido no banco principal,
+# invalidar o cache do carrinho.
+DEL cart:user:1001
+
+# Confirmar que a chave foi removida (retorno esperado: 0).
+EXISTS cart:user:1001
