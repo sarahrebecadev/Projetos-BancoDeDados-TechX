@@ -66,6 +66,18 @@ Modelagem de relacionamentos entre usuários e produtos em um grafo Neo4j, além
 
 **Pasta:** [Sprint 9 e 12 - Grafos e Cache](Sprint%209%20e%2012%20-%20Grafos%20e%20Cache/)
 
+### Sprint 13 — Arquitetura com Persistência Poliglota
+**Tema: Divisão de um ERP em contextos de Vendas, Estoque e Financeiro**
+
+Desenho de uma arquitetura com três contextos delimitados e escolha de SGBDs conforme as necessidades de cada domínio:
+- **Vendas — Redis:** sessões e carrinhos temporários com Hash e TTL;
+- **Estoque — MongoDB:** catálogo de produtos com especificações flexíveis em documentos;
+- **Financeiro — PostgreSQL:** faturas, integridade relacional, agregações e transação condicionada ao saldo;
+- Descrição da integração assíncrona por eventos entre os contextos;
+- Reflexão sobre Polyglot Persistence e considerações sobre o teorema CAP.
+
+**Pasta:** [Sprint 13](Sprint%2013/)
+
 ## 🧠 Principais conhecimentos praticados
 
 - Levantamento de requisitos e modelagem conceitual, lógica e física;
