@@ -53,7 +53,7 @@ Modelagem de uma coleção de produtos no MongoDB, utilizando documentos com arr
 
 **Pasta:** [Sprint 7 e 8 - MongoDB E-commerce](Sprint%207%20e%208%20-%20MongoDB%20E-commerce/)
 
-### Sprint 9 e 10 — Banco de Grafos e Cache
+### Sprint 9 e 12 — Banco de Grafos e Cache
 **Tema: Sistema de recomendações com Neo4j e carrinho de compras com Redis**
 
 Modelagem de relacionamentos entre usuários e produtos em um grafo Neo4j, além da definição de cache de carrinho usando Hash no Redis. A entrega inclui:
@@ -64,7 +64,7 @@ Modelagem de relacionamentos entre usuários e produtos em um grafo Neo4j, além
 - Operações `HSET`, `HGETALL`, `EXPIRE`, `TTL` e invalidação com `DEL`;
 - Reflexão sobre bancos de grafos, JOINs relacionais e cache em memória.
 
-**Pasta:** [Sprint 9 e 10 - Grafos e Cache](Sprint%209%20e%2010%20-%20Grafos%20e%20Cache/)
+**Pasta:** [Sprint 9 e 12 - Grafos e Cache](Sprint%209%20e%2012%20-%20Grafos%20e%20Cache/)
 
 ## 🧠 Principais conhecimentos praticados
 
@@ -105,7 +105,7 @@ Projetos-BancoDeDados-TechX/
 │   ├── 02_insercao_dados.js
 │   ├── 03_indices.js
 │   └── 04_consultas.js
-└── Sprint 9 e 10 - Grafos e Cache/
+└── Sprint 9 e 12 - Grafos e Cache/
     ├── README.md
     ├── 01_modelo_grafo.cypher
     ├── 02_consultas_recomendacao.cypher
